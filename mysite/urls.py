@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from actors import views
+
 urlpatterns = [
+    path('found/films', views.found_films, name='found_films'),
+    path('newactor', views.new_actor, name='new_actor'),
+    path('newfilm', views.new_film, name='new_film'),
     path('actors/', include('actors.urls')),
     path('admin/', admin.site.urls),
 ]

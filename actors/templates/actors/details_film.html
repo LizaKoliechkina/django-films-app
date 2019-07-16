@@ -1,0 +1,12 @@
+<h1> {{ film.film_name }} </h1>
+<h2>Year: {{ film.film_year }} </h2>
+
+<br/>
+
+<ul>
+    {% for a in actors %}
+        <a href='/actors/{{ a }}'>
+            <li>{{ a }}</li>
+        </a>
+    {% endfor %}
+</ul> 

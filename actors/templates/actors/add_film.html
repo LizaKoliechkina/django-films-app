@@ -1,0 +1,27 @@
+<h2>Add new film:</h2>
+
+<form action="{% url 'new_film' %}" method="POST">
+    {% csrf_token %}
+    
+        <label for="film_name">Name: </label>
+        <input type="text" name="film_name">
+        <label for="film_year">Year: </label>
+        <input type="text" name="film_year">
+    
+    <br/>
+    <br/>
+
+    <h4>Choose actors: </h4>
+    <select id="actors" name="actors" size="3" multiple>
+        {% for a in actors %}
+            <option value="{{ a }}">{{ a }}</option>
+        {% endfor %}
+    </select>
+    
+    <br/>
+    <h5>Hold down the Ctrl / Command button to select a few actors</h5>
+
+    <br/>
+    <input type="submit" value="Save">
+
+</form>

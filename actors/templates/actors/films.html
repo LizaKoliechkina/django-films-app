@@ -1,0 +1,11 @@
+<h2> Films </h2>
+<br/>
+<ul>
+    {% for f in films %}
+        <li> 
+            <a href='/actors/film/{{ f }}'>
+                <span> {{ f.film_name }} ({{ f.film_year }}) </span>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

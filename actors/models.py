@@ -17,3 +17,8 @@ class Film(models.Model):
     def __str__(self):
         return self.film_name
 
+    def search_film(self, word):
+        return word in self.film_name
+
+    def check_actor(self, Actor):
+        return Actor in self.actors.all()

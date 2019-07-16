@@ -1,0 +1,10 @@
+<h2>Add new actor:</h2>
+
+<form action="{% url 'new_actor' %}" method="POST">
+    {% csrf_token %}
+    <label for="actor_name">Name: </label>
+    <input type="text" name="actor_name">
+    <label for="country">Country: </label>
+    <input type="text" name="country">
+    <input type="submit" value="Save">
+</form>

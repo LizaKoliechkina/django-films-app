@@ -1,0 +1,7 @@
+<h2>List of Actors</h2>
+<br/>
+<ul>
+    {% for a in actor_names %}
+    <li><a href= '/actors/{{ a }}'>{{ a }}</a></li>
+    {% endfor %}
+</ul>

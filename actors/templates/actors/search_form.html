@@ -1,0 +1,10 @@
+<h2> What you want to find</h2>
+
+<form action="{% url 'found_films' %}" method="POST">
+{% csrf_token %}
+    <h4>
+        <label for="search_term"> Film: </label>
+        <input type="text" name="search_term">
+        <input type="submit" value="Find">
+    </h4>
+</form>
